@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container-sm text-center">
+            <h1>Password Generator</h1>
+            <form action="{% url 'password' %}" class="form-group">
+                <select name="length">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>Length
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="uppercase" ><b>Uppercase</b>
+                    
+
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="numbers" ><b>numbers</b>
+                    
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="special" ><b>Special characters</b>
+                    
+                  </div>
+
+                <br>
+                
+                <br>    
+                <input type="submit" value="Generate" class="btn btn-primary">
+    
+                
+    
+            </form>
+            
+            <br>
+            <br>
+            <button type="button" class="btn btn-light">
+                <a href="{% url  'about' %}">About</a>
+            </button>
+            
+
+        </div>
+       
+        <script src="" async defer></script>
+    </body>
+</html>
